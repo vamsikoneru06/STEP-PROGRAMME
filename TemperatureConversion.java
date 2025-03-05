@@ -3,10 +3,14 @@ import java.util.Scanner;
 public class TemperatureConversion {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter temperature in Fahrenheit: ");
-        double fahrenheit = scanner.nextDouble();
-        double celsiusResult = (fahrenheit - 32) * 5 / 9;
-        System.out.printf("The %.2f Fahrenheit is %.2f Celsius%n", fahrenheit, celsiusResult);
+        
+        System.out.print("Enter temperature in Celsius: ");
+        double celsius = scanner.nextDouble();
+        //applying formula
+        double fahrenheitResult = (celsius * 9/5) + 32;
+        
+        System.out.println("The " + celsius + " Celsius is " + fahrenheitResult + " Fahrenheit");
+        
         scanner.close();
     }
 }
